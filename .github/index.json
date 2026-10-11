@@ -1,0 +1,35 @@
+{
+  "apiVersion": "pmcro.dev/v1",
+  "kind": "agent.index",
+  "agent": "skill-creator-agent",
+  "entries": [
+    {
+      "route": "@skill-creator-agent /skill-creator:create-skill",
+      "plugin": "skill-creator",
+      "skill": "create-skill",
+      "description": "Create a candidate marketplace skill package with an agent, scripts, references, assets, and tests. Use when a marketplace needs a new skill. Does not register the candidate.",
+      "path": ".pmcro/plugins/skill-creator/skills/create-skill"
+    },
+    {
+      "route": "@skill-creator-agent /skill-creator:delete-skill",
+      "plugin": "skill-creator",
+      "skill": "delete-skill",
+      "description": "Delete a candidate skill package. Use when a candidate should be removed. Refuses a skill the catalog lists.",
+      "path": ".pmcro/plugins/skill-creator/skills/delete-skill"
+    },
+    {
+      "route": "@skill-creator-agent /skill-creator:read-skill",
+      "plugin": "skill-creator",
+      "skill": "read-skill",
+      "description": "Retrieve a skill from the catalog, or from a candidate package. Use to read a skill. Does not register the candidate.",
+      "path": ".pmcro/plugins/skill-creator/skills/read-skill"
+    },
+    {
+      "route": "@skill-creator-agent /skill-creator:update-skill",
+      "plugin": "skill-creator",
+      "skill": "update-skill",
+      "description": "Update the description of a candidate skill package. Use when a candidate needs a new purpose. Does not change the catalog.",
+      "path": ".pmcro/plugins/skill-creator/skills/update-skill"
+    }
+  ]
+}

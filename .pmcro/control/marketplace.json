@@ -1,0 +1,16 @@
+{
+  "name": "skill-creator-agent",
+  "owner": {
+    "name": "pmcr-o"
+  },
+  "metadata": {
+    "description": "Skill lifecycle agent for create/read/update/delete and checked promotion."
+  },
+  "plugins": [
+    {
+      "name": "skill-creator",
+      "source": "./.pmcro/plugins/skill-creator",
+      "description": "skill-creator capabilities owned by skill-creator-agent"
+    }
+  ]
+}

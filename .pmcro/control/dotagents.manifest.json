@@ -1,0 +1,16 @@
+{
+  "schema": "dotagents.manifest/v1",
+  "name": "skill-creator-agent",
+  "owner": "pmcr-o",
+  "description": "Skill lifecycle agent for create/read/update/delete and checked promotion.",
+  "invocationField": "plugin",
+  "plugins": [
+    {
+      "name": "skill-creator",
+      "source": "./.pmcro/plugins/skill-creator",
+      "description": "skill-creator capabilities owned by skill-creator-agent"
+    }
+  ],
+  "canonical": ".pmcro",
+  "projection": ".agents"
+}

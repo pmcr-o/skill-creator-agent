@@ -1,0 +1,31 @@
+{
+  "schema": "pmcro.capabilities/v1",
+  "agent": "skill-creator-agent",
+  "executionRule": "registered AND runtime-present AND authorized",
+  "manualParity": {
+    "required": true,
+    "rule": "agent and manual terminal use the same scripts with the same arguments, exit codes, and evidence"
+  },
+  "capabilities": [
+    {
+      "plugin": "skill-creator",
+      "skill": "create-skill",
+      "route": "@skill-creator-agent /skill-creator:create-skill"
+    },
+    {
+      "plugin": "skill-creator",
+      "skill": "delete-skill",
+      "route": "@skill-creator-agent /skill-creator:delete-skill"
+    },
+    {
+      "plugin": "skill-creator",
+      "skill": "read-skill",
+      "route": "@skill-creator-agent /skill-creator:read-skill"
+    },
+    {
+      "plugin": "skill-creator",
+      "skill": "update-skill",
+      "route": "@skill-creator-agent /skill-creator:update-skill"
+    }
+  ]
+}
